@@ -1,0 +1,10 @@
+{
+    "first_name": "John",
+    "last_name": "Smith",
+    "email_addresses": [
+        "example1@gmail.com",
+        "example2@gmail.com",
+        "example3@gmail.com",
+        "example4@gmail.com"
+    ]
+}
