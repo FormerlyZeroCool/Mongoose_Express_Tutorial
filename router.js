@@ -21,7 +21,7 @@ function gen(app)
         res.send(data);
     });
     app.get('/:userId',async (req, res, err) => {
-	      console.log("Get / called");
+	      console.log(req.params);
           const data = await Models.User.find()
         res.send(data);
     });
