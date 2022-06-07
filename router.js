@@ -7,7 +7,7 @@ const Models = require("./Models");
 function gen(app)
 {
     //Routes definition
-    app.post('/',async (req,res,err) => {
+    app.post('/',async (req, res, err) => {
         console.log('Request received to POST /');
 	console.log(req.body);
         const user = new Models.User({ userName:req.body.userName, password: req.body.password, isAdmin:false });
@@ -15,12 +15,15 @@ function gen(app)
         res.send("<h1>Record posted!</h1>");
     }
     );
-    app.get('/user',async (req,res,err) => {
+    app.get('/',async (req, res, err) => {
 	      console.log("Get / called");
           const data = await Models.User.find()
         res.send(data);
     });
-    
-    //return app;
+    app.get('/:userId',async (req, res, err) => {
+	      console.log("Get / called");
+          const data = await Models.User.find()
+        res.send(data);
+    });
 }
 exports.gen = gen;
