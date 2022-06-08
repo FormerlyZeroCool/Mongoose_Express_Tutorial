@@ -22,7 +22,7 @@ function gen(app)
     });
     app.get('/:userId',async (req, res, err) => {
 	      console.log(req.params);
-          const data = await Models.User.find()
+          const data = await Models.User.find(req.params);
         res.send(data);
     });
 }
