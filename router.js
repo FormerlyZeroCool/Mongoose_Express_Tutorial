@@ -20,7 +20,7 @@ function gen(app)
           const data = await Models.User.find()
         res.send(data);
     });
-    app.get('/:userId',async (req, res, err) => {
+    app.get('/:userName',async (req, res, err) => {
 	      console.log(req.params);
           const data = await Models.User.find(req.params);
         res.send(data);
